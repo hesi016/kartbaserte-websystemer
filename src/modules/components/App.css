@@ -1,0 +1,255 @@
+* {
+  margin: unset;
+}
+
+#root {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+/*APPLIKASJONS STYLING*/
+.header {
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #4f7abc, #c4d2ec);
+  text-align: center;
+  border-bottom: 2px solid #bbb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #2b2b2b;
+  letter-spacing: 1px;
+}
+
+.undertittel,
+.filterhint {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.25rem 0;
+  font-weight: 400;
+}
+
+/*STYLING CHECKBOX / FILTER BOX / ADD POINT BUTTON*/
+.checkbox-button,
+.addPointButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e1e6f8;
+  color: #004aad;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+/*HOVRING VED CHECKBOX / FILTER BOX / ADD POINT BUTTON*/
+.checkbox-button:hover,
+.addPointButton:hover {
+  background-color: #e0ecff;
+  transform: translateY(-1px);
+}
+
+.checkbox-button input[type="checkbox"] {
+  accent-color: #004aad;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+/*CHECKBOX GRUPPE STYLING*/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+
+  width: 100%;
+  background: #f9fbff;
+  border-radius: 1px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+
+  transform: none;
+  position: relative;
+  z-index: 2;
+}
+
+/*POPUPS*/
+.overlay {
+  position: absolute;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 12px;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  z-index: 1000;
+}
+
+.overlay-content {
+  margin-top: 10px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-button:hover {
+  color: black;
+}
+
+/*OVERVIEW-MINI-MAP*/
+.ol-overviewmap {
+  width: 280px !important; /* Øk bredden */
+  height: 160px !important; /* Øk høyden */
+  bottom: 12px;
+  left: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ol-overviewmap-map {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+}
+
+.ol-overviewmap-box {
+  border: 2px dotted #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/*KNAPP FOR Å SKJULE OG VISE FILTRE*/
+.toggle-filters {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.toggle-filters:hover {
+  background-color: #003b8e;
+}
+
+/*POP UP FOR GEO PLASSERING*/
+.popup-form-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 350px;
+  max-width: 300px;
+  border-radius: 10px;
+}
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.popup-form h2 {
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="color"] {
+  padding: 0.3rem;
+  font-size: 1rem;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.popup-form button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+dialog::backdrop {
+  background: rgba(73, 71, 71, 0.7);
+}
+
+dialog {
+  border: none;
+  border-radius: 7px;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 5);
+}
+
+.popup-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.popup-buttons button {
+  padding: 0.5rem 1.2rem;
+  background-color: #e1e6f8;
+  color: #004aad;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-in-out;
+}
+
+.popup-buttons button:hover {
+  background-color: #d2defc;
+  transform: translateY(-1px);
+}

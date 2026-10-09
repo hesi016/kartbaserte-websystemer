@@ -1,0 +1,10 @@
+#Kjører database lokalt.Firestaions & CivilDefenseDistricts.
+services:
+  postgis:
+    container_name: postgis
+    image: postgis/postgis
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432" #lokal port. localhost
+
