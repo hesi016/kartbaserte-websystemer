@@ -1,5 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/XamnFLGl)
-Kandidatnummer: 5 & 7 // Gruppenummer 1
+Dette prosjektet ble utviklet som en eksamensoppgave i Kartbaserte websystemer ved Kristiania, i samarbeid med en medstudent. Vi laget et interaktivt kart over Norges nødetater, der brukeren kan utforske ulike kartlag, justere visningen og legge til egne punkter. Vi samarbeidet gjennom hele prosessen, fra idé og planlegging til utvikling og utforming av løsningen.
 
 # Norges Nødetater
 
